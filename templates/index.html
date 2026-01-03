@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie Recommender</title>
+    </head>
+    <body>
+        <h1>Welcome to the Movie Recommender</h1>
+        <form method="post">
+            <label for="movie_title">Enter a movie title:</label>
+            <input type="text" id="movie_title" name="movie_title" required>
+            <br>
+            <label for="no_of_recommendations">Number of Recommendations:</label>
+            <input type="number" id="no_of_recommendations" name="no_of_recommendations" value="5" min="1" max="20" required>
+            <br><br>
+            <input type="submit" value="Get Recommendations">
+        </form>
+        <p1>
+            <br>
+            <var>{{ header }}</var>
+            <ol>
+            {% for film in recommendations %}
+                <li><var>{{ film }}</var></li>
+            {% endfor %}
+            </ol>
+        </p1>
+    </body>
+</html>
